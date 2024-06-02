@@ -1,32 +1,17 @@
 ﻿using System;
 
-namespace TriangleTypeIdentifier
+namespace TicketPriceCalculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the length of the first side of the triangle:");
-            double side1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your age:");
+            int age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the length of the second side of the triangle:");
-            double side2 = double.Parse(Console.ReadLine());
+            int ticketPrice = (age <= 12 || age >= 65) ? 7 : 10;
 
-            Console.WriteLine("Enter the length of the third side of the triangle:");
-            double side3 = double.Parse(Console.ReadLine());
-
-            if (side1 == side2 && side2 == side3)
-            {
-                Console.WriteLine("The triangle is Equilateral.");
-            }
-            else if (side1 == side2  side2 == side3  side1 == side3)
-            {
-                Console.WriteLine("The triangle is Isosceles.");
-            }
-            else
-            {
-                Console.WriteLine("The triangle is Scalene.");
-            }
+            Console.WriteLine("Ticket Price: GHC" + ticketPrice);
         }
     }
 }
